@@ -4,6 +4,7 @@ from moviepy.editor import AudioFileClip
 from aiogram import F
 from aiogram.types import Message
 from loader import bot, router
+
 @router.message(F.voice)
 async def handle_voice(message: Message):
     file_id = message.voice.file_id
